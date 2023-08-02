@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    let list = [10,5,6,7,8,3,4,2];
+    function findAvg(){
+      let sum = 0;
+      let ave;
+      for (let i = 0; i < list.length; i++) {
+        sum += list[i];
+      }
+      ave = sum / list.length;
+      alert(`Giá trị trung bình là: ${ave}`);
+    }
+    findAvg();
+  </script>
+</body>
+</html>

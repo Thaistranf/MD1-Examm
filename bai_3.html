@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+       function isPrime(number) {
+           if (number < 2) {
+               return false;
+           }
+           for (let i = 2; i <= Math.sqrt(number); i++) {
+               if (number % i === 0) {
+                   return false;
+               }
+           }
+           return true;
+       }
+
+       function sumOfListPrime(x) {
+           let sum = 0;
+           for (let i = 0; i <= x; i++) {
+               if (isPrime(i)) {
+                   sum += i;
+               }
+           }
+           return sum;
+       }
+
+       let x = +prompt("Nhập một số nguyên: ");
+       let result = sumOfListPrime(x);
+       alert(`Tổng các số nguyên tố từ 0 đến ${x} là ${result}`);
+    </script>
+</body>
+</html>
